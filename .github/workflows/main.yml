@@ -1,3 +1,5 @@
+# This is a basic workflow to help you get started with Actions
+
 name: Build
 
 on: [push]
@@ -13,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        model: [ "G970F,G973F,G975F", "N970F,N975F" ]
+        model: [ "G975F" ]
 
     steps:
       - uses: actions/checkout@v2
@@ -26,9 +28,9 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="Cruel-Urban-v4.2"         \
+                       name="Cruel-UB-v4.2"         \
                        toolchain=$TOOLCHAIN      \
-                       +magisk                   \
+                       +magisk=canary                   \
                        +nohardening              \
                        +ttl                      \
                        +wireguard                \
@@ -38,6 +40,17 @@ jobs:
                        +force_dex_wqhd           \
                        +morosound                \
                        +boeffla_wl_blocker       \
+                       +300hz                    \
+                       +io_deadline              \
+                       +io_cfq                   \
+                       +force_dex_wqhd           \
+                       +tcp_westwood             \
+                       +sched_...                \
+                       +boeffla_wl_blocker       \
+                       +performance              \
+                       +noaudit                  \
+                       +fake_config              \
+                       
           2>&1 | tee config.info
 
       - name: Install gcc-aarch64-linux-gnu
