@@ -45,7 +45,9 @@ jobs:
                        +io_cfq                   \
                        +force_dex_wqhd           \
                        +tcp_westwood             \
-                       +sched_interactivex       \
+                       +sched_performance        \
+                       +sched_ondemand           \
+                       +sched_concervative       \
                        +boeffla_wl_blocker       \
                        +performance              \
                        +noaudit                  \
