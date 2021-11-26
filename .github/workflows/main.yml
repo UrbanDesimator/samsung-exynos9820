@@ -38,7 +38,7 @@ jobs:
                        +force_dex_wqhd           \
                        +performance              \
                        +io_zen                   \
-                       +tcp_westwood
+                       +tcp_westwood             \
                        +morosound                \
                        +boeffla_wl_blocker       \
           2>&1 | tee config.info
