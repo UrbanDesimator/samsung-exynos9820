@@ -41,7 +41,7 @@ jobs:
                        +morosound                \
                        +boeffla_wl_blocker       \
                        +300hz                    \
-                       +io_deadline              \
+                       +io_zen                   \
                        +io_cfq                   \
                        +force_dex_wqhd           \
                        +tcp_westwood             \
