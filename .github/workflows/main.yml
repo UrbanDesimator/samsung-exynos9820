@@ -38,6 +38,12 @@ jobs:
                        +force_dex_wqhd           \
                        +morosound                \
                        +performance              \
+                       +io_zen                   \
+                       +300hz                    \
+                       +sched_performance        \
+                       +always_enforce           \
+                       +tcp_westwood             \
+                       +empty_vbmeta             \
                        +boeffla_wl_blocker       \
           2>&1 | tee config.info
 
